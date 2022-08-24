@@ -1,4 +1,4 @@
-FROM centos:7.0.1406
+FROM centos:7.1.1503
 MAINTAINER ankush
 RUN yum install httpd -y \ zip \ unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page281/limelight.zip /var/www/html/

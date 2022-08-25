@@ -1,10 +1,10 @@
-FROM ubuntu:latest
+FROM centos:7
 MAINTAINER a7pute
-RUN apt-get update -y
-RUN apt-get install apache2 
+RUN yum update -y
+RUN yum install httpd 
 EXPOSE 80
 RUN cd /var/www/html
 RUN echo "Hello" > index.html
-ENTRYPOINT ["/usr/sbin/apache2ctl"]
+ENTRYPOINT ["/usr/sbin/httpd"]
 CMD ["-D","FOREGROUND"]
 

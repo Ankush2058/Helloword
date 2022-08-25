@@ -3,5 +3,5 @@ MAINTAINER a7pute
 RUN yum install httpd -y 
 RUN cd /var/www/html
 RUN echo "Hello , Good N8 " > index.html
-CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
+ENTRYPOINT ["/usr/sbin/httpd","-D","FOREGROUND"]
 EXPOSE 80
